@@ -1,0 +1,29 @@
+
+def is_neon(num):
+    square = num * num
+    digit_sum = sum(int(digit) for digit in str(square))
+    return digit_sum == num
+
+
+number = int(input("Enter a number: "))
+if is_neon(number):
+    print(f"{number} is a Neon Number")
+else:
+    print(f"{number} is NOT a Neon Number")
+
+
+num = int(input("Enter a number: "))
+
+square = num * num
+
+
+digit_sum = 0
+
+while square > 0:
+    digit_sum += square % 10
+    square //= 10
+
+if digit_sum == num:
+    print(f"{num} is a Neon Number")
+else:
+    print(f"{num} is NOT a Neon Number")
